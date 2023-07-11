@@ -1,4 +1,5 @@
-#psnr.py
+#psnr + SSIM 
+#author: chartgod
 
 import numpy
 from scipy.ndimage import gaussian_filter
@@ -17,7 +18,6 @@ def psnr(img1, img2):
     PIXEL_MAX = 255.0
     return 20 * math.log10(PIXEL_MAX / math.sqrt(mse))
 
-##ssim.py
 #2차원 이미지만 사용할 수 있도록 수정함. 다른차원도 가지고 있을 가능성이 있음. 그러니 틀린 내용임.
 
 def block_view(A, block=(3, 3)):
